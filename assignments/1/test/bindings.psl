@@ -1,6 +1,0 @@
-defvar x = 0 in {
-  defvar x = 1 in {
-    print(x);
-  }
-  print(x);
-}
