@@ -1,0 +1,6 @@
+Assignment info:
+- http://www.cs.brown.edu/courses/cs173/2012/Assignments/ParselTest/
+
+To run tests:
+- ./bin/assignment1-osx --test-interps test
+

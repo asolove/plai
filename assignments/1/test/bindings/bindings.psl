@@ -1,3 +1,6 @@
+# Bindings introduced by formal parameters should not collide
+# with bindings from an outside scope.
+
 defvar foo = 0 in 
 deffun bar(foo) foo = 1 in {
   bar(1);
