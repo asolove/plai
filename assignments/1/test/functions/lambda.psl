@@ -1,0 +1,5 @@
+# Lambdas should not be able to call themselves recursively.
+
+defvar add = lambda(a, b){ if ==(a, 0) then b else add(-(a,1), +(b, 1))} in {
+  add(1, 2)
+}
