@@ -1,0 +1,5 @@
+# Test error thrown for multiple definitions of same field in object
+
+defvar o = { a: 1, a: 2 } in {
+  o.a
+}
