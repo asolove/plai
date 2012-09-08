@@ -1,0 +1,7 @@
+# Test that loop body doesn't execute if exit condition already true.
+
+defvar x = 0 in {
+  for(x = 0; <(x, 0); x++) {
+    +(x, 1);
+  }
+}

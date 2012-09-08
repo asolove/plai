@@ -1,0 +1,6 @@
+# Test that uninitialized variables cannot be used.
+
+defvar a = 1 in {
+  b = 2;
+  b;
+}
