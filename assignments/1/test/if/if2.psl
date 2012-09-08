@@ -1,0 +1,3 @@
+# Test that empty string evaluates to truthy
+
+if "" then "succeed" else "fail"
