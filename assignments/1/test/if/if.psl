@@ -1,0 +1,3 @@
+defvar o = { value: if true then 1 else 2 } in {
+  o.value
+}

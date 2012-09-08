@@ -1,0 +1,9 @@
+# Test that pre-increment returns value after increment
+# and post-increment returns value before increment
+
+defvar a = 1 in
+defvar b = a++ in
+defvar c = ++a in {
+  print(b);
+  print(c);
+}
