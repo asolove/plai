@@ -1,5 +1,5 @@
 # Test lookup up a field via string name
 
 defvar o = { a: 2 } in {
-  o["a"]
+    o["a"]
 }
