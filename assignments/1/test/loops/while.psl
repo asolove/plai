@@ -1,0 +1,7 @@
+# Test that while loop that never executes evaluates to false
+
+defvar x = true in {
+  while (false) {
+    1;
+  }
+}

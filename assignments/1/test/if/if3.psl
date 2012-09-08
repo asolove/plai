@@ -1,0 +1,3 @@
+defvar x = 4 in {
+  if x then "pass" else "fail"
+}
