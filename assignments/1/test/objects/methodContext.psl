@@ -1,0 +1,9 @@
+# Test that methods are run in the right object context
+
+defvar foo = { value: 1, f: lambda(self){ self.value}} in
+defvar bar = { value: 2, f: foo.f } in 
+defvar f = bar.f in {
+  print(foo@f());
+  print(bar@f());
+  f({value: 3});
+}
