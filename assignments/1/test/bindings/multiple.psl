@@ -1,0 +1,4 @@
+defvar a = 2 in
+defvar a = 3 in {
+  a
+}

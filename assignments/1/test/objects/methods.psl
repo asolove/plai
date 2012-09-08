@@ -1,0 +1,3 @@
+defvar obj = { value: 2, plus: lambda(self, x){ +(self.value, x)}} in {
+  obj@plus(2)
+}

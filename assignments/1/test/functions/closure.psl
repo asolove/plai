@@ -1,0 +1,7 @@
+# Test that functions closing of bindings get the right bindings.
+
+defvar a = 1 in
+deffun aPlusOne() +(a,1) in
+defvar a = 3 in {
+  aPlusOne()
+}
