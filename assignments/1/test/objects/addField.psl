@@ -1,0 +1,3 @@
+# Adding a new field to an existing object and check that it is set
+
+(({foo: 1}).bar = 2).bar

@@ -1,0 +1,6 @@
+# addition of positive numbers
+deffun add(a, b)
+  if ==(a, 0) then b else add(-(a, 1), +(b, 1))
+in {
+  add(2, 3)
+}

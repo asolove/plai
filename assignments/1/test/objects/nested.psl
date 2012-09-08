@@ -1,0 +1,5 @@
+# Objects should be allowed to be nested 
+
+defvar foo = { bar: 1, baz: { quux: 2 } } in {
+  foo.baz.quux
+}

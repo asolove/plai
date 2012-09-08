@@ -1,0 +1,6 @@
+# Test that objects are not mutated in place
+
+defvar foo = {bar:1} in {
+  print((foo.bar = 2).bar);
+  print(foo.bar);
+}
