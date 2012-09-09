@@ -1,0 +1,5 @@
+deffun x(n)
+  print(n);
+in {
+  <(x(1), x(2));
+}

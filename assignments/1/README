@@ -4,3 +4,7 @@ Assignment info:
 To run tests:
 - ./bin/assignment1-osx --test-interps test
 
+Easy ones left:
+
+- loops2
+- operators2

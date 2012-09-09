@@ -1,0 +1,5 @@
+defvar foo = 1 in
+defvar o = { foo: foo } in {
+  foo++;
+  o.foo;
+}
