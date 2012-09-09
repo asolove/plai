@@ -1,6 +1,5 @@
 defvar x = 0 in {
-  while (x){
+  for(x; x; x=false){
     print("pass");
-    x = false;
   }
 }
