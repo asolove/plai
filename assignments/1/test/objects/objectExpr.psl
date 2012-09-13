@@ -1,0 +1,4 @@
+defvar obj = { val: 1 } in {
+  (obj["val"] += 1).val;
+  obj.val;
+}
