@@ -9,14 +9,8 @@
      (case (first e)
        [(+) (plusC (parse (second e)) (parse (third e)))]
        [(*) (multC (parse (second e)) (parse (third e)))]
-       [else (appC (first e) (parse (second e)))]))
+       [symbol? (appC (second e) (third e))]))
     [else (error "unrecognized syntax")]))
-
-(define (parse-defs e)
-  (map parse-def e))
-
-(define (parse-def e)
-  (fdC (second e) (third e) (parse (fourth e))))
 
 (define-type ExprC
   [numC (n number?)]
@@ -36,7 +30,7 @@
     [idC (s) (error "Unbound identifier")]
     [appC (name arg) 
           (local ([define fn (get-fundef name fds)])
-            (interp (subst (numC (interp arg fds))
+            (interp (subst arg
                            (fdC-arg fn)
                            (fdC-body fn))
                     fds))]))
@@ -52,6 +46,6 @@
     [numC (n) (numC n)]
     [plusC (l r) (plusC (subst value for l) (subst value for r))]
     [multC (l r) (multC (subst value for l) (subst value for r))]
-    [idC (s) (if (eq? s for) value in)]
+    [idC (s) (if (eq? s for) value (idC s))]
     [appC (name arg) (appC name (subst value for arg))]))
     
