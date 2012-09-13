@@ -1,0 +1,16 @@
+# Test mutation nested inside expressions in if conditions.
+# If variables are set inside an if condition, the change should 
+# be visible to later expressions.
+
+# Interestingly, if the mutation is the top-level expression in
+# the if statement, it is visible to the outer world. if(x++) increments x.
+# But if the mutation is in a nested expression, it is not visible
+# to the outside world, e.g. if(==(x++,100)) does not increment x.
+
+defvar x = 1 in {
+  if(x++) then false else false;
+  print(x);
+  x=1;
+  if(==(x++,100)) then false else false;
+  x;
+}
